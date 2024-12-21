@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     <title>Krispy</title>
+</head>
+
+<body>
+<div class="nav-container">
+
+    <nav>
+    <img src="Images/file.png" >
+    <ul class="nav-links">
+        <li><a href="#index.html">HOME</a></li>
+        <li><a href="#about-us">ABOUT US</a></li>
+        <li><a href="#" id="login-link">LOGIN</a></li>
+        <li><a href="#" id="register-link">REGISTER</a></li>
+        </ul>
+        <button class="nav-btn">Order</button>
+       <a href="#menu"><button class="menu-btn">Menu</button></a> 
+
+
+    <div class="nav-icon" id="cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="count">0</span>
+    </div>
+</nav>
+</div>    
+
+<div id="cart" class="cart-hidden">
+  <div class="-cart-header">
+<span class="close-cart" id="close-cart-icon">&times;</span> 
+   <h3>Your Cart</h3>
+  <hr>
+  </div>
+  
+  <button class="delivery-btn">Delivery</button> 
+   <button class="pickup-btn">Pick Up (45mins)</button>
+
+<div class="cart-items" >
+      <img src="Images/burger.jpg" alt="" class="product-img">
+
+      <div class="product-info">
+      <h1>Spicy Burger</h1>
+      <h2>£7.00</h2>
+
+      <div class="quantity-selector">
+        <button class="decrement" aria-label="decrease quantity">-</button>
+        <span class="quantity-display">2</span>
+        <button class="increment" aria-label="increase quantity">+</button>
+      </div>
+      
+    </div>
+</div>
+  <button id="checkout">Checkout</button>
+</div>
+
+<!--Registration Form-->
+<div class="register-form" id="register-form">
+
+  <div class="register-header">
+  <span class="close-form" id="close-form-btn">&times;</span> 
+    <h2>Register</h2>
+    <h5><span><a href="">Or login to your account</a></span></h5>
+  </div>
+    <form>
+            <!--Phone number-->
+      <div class="form-group phone-number">
+        <label for="country-code">+44</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <!--I'm not a robot-->
+      <div class="form-group robot-check">
+        <input type="checkbox" id="not-a-robot" name="not-a-robot" required>
+        <label for="not-a-robot">I'm not a robot</label>
+      </div>
+
+      <div class="form-group otp">
+       <!--<label for="otp">Enter OTP</label>--> 
+        <input type="text" id="otp" name="otp" placeholder="Enter the OTP" required style="display:none;">
+      </div>
+      <button type="button" id="send-otp-btn" class="otp-btn">Send OTP</button>
+     
+
+    </form>
+    </div>
+
+<!--login-->
+    <div class="register-form" id="login-form">
+
+      <div class="register-header">
+      <span class="close-form" id="close-login-btn">&times;</span> 
+        <h2>Login</h2>
+        <h5><span><a href="">Or Register</a></span></h5>
+      </div>
+        <form>
+                <!--Phone number-->
+          <div class="form-group phone-number">
+            <label for="country-code">+44</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+    
+          <!--I'm not a robot-->
+          <div class="form-group robot-check">
+            <input type="checkbox" id="not-a-robot" name="not-a-robot" required>
+            <label for="not-a-robot">I'm not a robot</label>
+          </div>
+    
+          <button type="button" id="send-otp-btn" class="otp-btn">Send OTP</button>
+
+        </form>
+        </div>
+
+<main class="hero-section">
+  <div class="hero-content">
+    <div class="hero-left-section">
+      <h1>The Birthplace Of <span>DIP</span> Burgers! </h1>
+      <h2>Experience the ultimate comfort food, where every bite is packed with flavor and joy.</h2>
+      <div class="postcode-search">
+        <input type="text" id="postcode" placeholder="Enter your Post Code">
+        <button class="cta" id="checkDelivery">Search</button>
+        <div id="deliveryMessage"></div>
+      </div>
+    </div>
+    <div class="hero-middle-section">
+      <img src="Images/flat-burger.png" alt="">
+    </div>
+    <div class="hero-right-section">
+      <div class="right-section first">
+        <img src="Images/riceplate.png" alt="">
+<h3>Wonderful, on time.</h3>   
+   </div>
+      <div class="right-section second">
+        <img src="Images/hero-pic11.png" alt="">
+        <h3>Fast Delivery, great service</h3>
+      </div>
+      <div class="right-section third">
+        <img src="Images/plate-wings.jpg" alt="">
+        <h3>Food was fresh, hot and amazing.</h3>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!--<div class="image-container">
+  <div class=" top-left" style="background-image: url('Images/hero-pic.png');"></div>
+  <div class=" top-right" style="background-image: url('Images/hero-pic.png');"></div>
+  <div class=" bottom-left" style="background-image: url('Images/hero-pic.png');"></div>
+  <div class=" bottom-right" style="background-image: url('Images/hero-pic.png');"></div>
+</div>-->
+
+
+<div class="pros-section">
+<h2 class="pro-title">Why We <span>Stand Out</span></h2>   
+<div class="pros-container">
+   <div class="pro-item">
+      <img src="Images/delivery.png" alt="">
+      <h2>Fast delivery</h2>
+      <h1>Enjoy quick meal options without waiting</h1>
+    </div>
+    <div class="pro-item">
+      <img src="Images/rating.png" alt="">
+      <h2>Satisfaction Guaranteed</h2>
+      <h1>Always Fresh. Always Satisfying!</h1>
+    </div>
+    <div class="pro-item">
+      <img src="Images/eat.png" alt="">
+      <h2>Delicious Food</h2>
+      <h1>Savor high-quality, flavorful dishes</h1>
+    </div>
+   
+  </div>
+</div>
+
+
+<section class="menu-section" id="menu">
+    <div class="menu-container">
+        <h2 class="menu-title">Our <span>BEST</span> delivered categories</h2>
+        <div class="categories">  
+          <button class="category-btn" onclick="showCategory('burgers')">   
+            <img src="Images/burger.jpg" >
+            <h1>Burgers & Wraps</h1>
+           </button>
+    
+        <button class="category-btn" onclick="showCategory('familybuckets')">       
+                <img src="Images/burger.jpg" >
+             <h1>Family Buckets</h1>
+         </button>
+
+         <button class="category-btn" onclick="showCategory('wings&strips')"> 
+          <img src="Images/wingsbox.jpg" >
+             <h1>Chicken Wings & Strips</h1>
+         </button>
+
+         <button class="category-btn" onclick="showCategory('nachos')">
+            <img src="Images/nachosbox.jpg" >
+             <h1>Nachos</h1>
+         </button>
+
+         <button class="category-btn" onclick="showCategory('periplatter')">
+             <img src="Images/grbox.jpg" >
+              <h1>Peri Platter Menu</h1>
+          </button>
+
+          <button class="category-btn" onclick="showCategory('sides')">
+            <img src="Images/burger.jpg" >
+             <h1>Sides</h1>
+         </button>
+         <button class="category-btn" onclick="showCategory('drinks')">
+              <img src="Images/burger.jpg" >
+          <h1>Drinks and Slushes</h1>
+        </div>
+        </div>
+
+<div class="extra-text">
+    <p>Burgers and Wraps</p>
+    <h1>5 Results</h1>
+</div>
+<section class="menu-container">
+ <div class="food-items">
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Chicken Fillet Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £4.50</option>
+          <option value="Double"> Double - £6.99</option>
+        </select>
+        <button >Add to cart</button>
+        </div>
+        <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Spicy Fillet Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £4.50</option>
+          <option value="Double"> Double - £6.99</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Beef Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £4.20</option>
+          <option value="Double"> Double - £6.70</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Cheese Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £4.50</option>
+          <option value="Double"> Double - £6.99</option>
+        </select>
+        <button>Add to Cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Texas BBQ Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.99</option>
+        </select>
+
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Nacho Chicken Burger</h4>
+<select id="size">
+  <option value="Single"> Single - £6.25</option>
+  <option value="Double"> Double - £7.99</option>
+</select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Supreme Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.99</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Ringo Burger</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.99</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Chicken Wrap</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.50</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Peri Chicken Wrap</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.55</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+     
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Spicy Chicken Wrap</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.30</option>
+          <option value="Double"> Double - £7.80</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>BBQ Chicken Wrap</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.99</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Lemon Pepper Wrap</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.50</option>
+          <option value="Double"> Double - £7.99</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/burger.jpg" alt="">
+        <h4>Fried Chicken Pieces</h4>
+        <select id="size">
+          <option value="Single"> Single - £5.80</option>
+          <option value="Double"> Double - £8.99</option>
+        </select>
+        <button>Add to cart</button>
+      </div>
+    </div>
+ </section>
+
+     <!--Drinks and Slushes-->
+<section id="drinks" class="menu-container" style="display:none;">
+    <div class="food-items">
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Pepsi Can</h4>
+        <p>£1.20</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/7up.jpeg" alt="">
+        <h4>7-Up</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/tangoorange.jpeg" alt="">
+        <h4>Tango Orange</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/tangoapple.jpg" alt="">
+        <h4>Tango Apple</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/irnbru.jpeg" alt="">
+        <h4>Irn Bru</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/drpepper.webp" alt="">
+        <h4>Dr Pepper</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/vimto.webp" alt="">
+        <h4>Vimto Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/miranda.webp" alt="">
+        <h4>Mirinda Strawberry Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/strawberry-miranda-can-330ml.jpg.webp" alt="">
+        <h4>Mirinda Orange Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/fruitshootbc.jpeg" alt="">
+        <h4>Fruit Shoot Blackcurrent Bottle</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/fruitshootorange.jpeg" alt="">
+        <h4>Fruit Shoot Orange Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/ribena.jpeg" alt="">
+        <h4>Ribena Blackcurrent Sparkling</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/rio.webp" alt="">
+        <h4>Rio Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/lilt.png" alt="">
+        <h4>Lilt Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/water.webp" alt="">
+        <h4>Water Can</h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/dietpepsi.jpg" alt="">
+        <h4>Diet Pepsi Can </h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsimax.jpg" alt="">
+        <h4>Pepsi Max Can </h4>
+        <p>£1.20</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsibottle.jpg" alt="">
+        <h4>1.5l Pepsi Bottle</h4>
+        <p>£3.00</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/7upbottle.jpg" alt="">
+        <h4>1.5l 7Up Bottle</h4>
+        <p>£3.00</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsimxbottle.jpg" alt="">
+        <h4>1.5l Pepsi Max Bottle</h4>
+        <p>£3.00</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/tangoorangebottle.jpg" alt="">
+        <h4>1.5l Tango Orange Bottle</h4>
+        <p>£3.00</p>
+        <button>Add to cart</button>
+      </div>
+      </div>
+  </section>
+  
+<!--Family Bucket-->
+  <section id="familybuckets" class="menu-container" style="display: none;">
+    <section class="food-items">
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Mini Bucket</h4>
+        <p>5pc Chicken, 3 Reg Fries & 2 Reg Sides</p>
+        <p>£12.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Family Feast</h4>
+        <p>8 Hot Wings, 4 Reg Fries & 2 Reg Sides</p>
+        <p>£19.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Bargain Bucket</h4>
+        <p>8pc Chicken, 4 Reg Fries & 2 Reg Sides</p>
+        <p>£15.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Double Bucket</h4>
+        <p>16pc Chicken,8 Reg Fries & 2 Reg Sides</p>
+        <p>£29.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Party Bucket</h4>
+        <p>12pc Chicken, 12 Hot Wings, 12 Strips, 6 Reg Fries & 4 Reg Sides</p>
+        <p>£37.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Bonless Bucket</h4>
+        <p>16pc,Strips, 3 Reg Fries, 4 Dips & 2 Reg Sides</p>
+        <p>£21.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Hot & Spicy Wings Bucket</h4>
+        <p>20 Wings ,4 Reg Fries & 2 Reg Sides</p>
+        <p>£21.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Dipped Wings Bucket</h4>
+        <p>20pc Spicy Dipped Wings, 4 Reg Fries & 2 Reg Sides</p>
+        <p>£24.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Bargain Dipped Bucket</h4>
+        <p>8pc Spicy Dipped Chicken, 4 Reg Fries & 2 Reg Sides</p>
+        <p>£17.99</p>
+        <button>Add to cart</button>
+      </div>
+     
+      </section>
+    </section>
+
+    <!--Chicken Wings & Strips-->
+
+    <section id="wings&strips" class="menu-container" style="display: none;" >
+      <div class="food-items">
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Spicy Wings</h4>
+          <select id="size">
+            <option value="3"> 3 - £2.50</option>
+            <option value="5"> 5 - £3.50</option>
+            <option value="10"> 10 - £6.50</option>
+            <option value="20"> 20 - £12.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Peri Wings</h4>
+          <select id="size">
+            <option value="3"> 3 - £3.00</option>
+            <option value="5"> 5 - £4.50</option>
+            <option value="10"> 10 - £7.50</option>
+            <option value="20"> 20 - £13.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Spicy Dipped Wings</h4>
+          <select id="size">
+            <option value="3"> 3 - £3.00</option>
+            <option value="5"> 5 - £4.50</option>
+            <option value="10"> 10 - £7.50</option>
+            <option value="20"> 20 - £13.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>BBQ Wings</h4>
+          <select id="size">
+            <option value="3"> 3 - £3.00</option>
+            <option value="5"> 5 - £4.50</option>
+            <option value="10"> 10 - £7.50</option>
+            <option value="20"> 20 - £13.50</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Lemon Pepper Wings</h4>
+          <select id="burger-size">
+            <option value="3"> 3 - £3.20</option>
+            <option value="5"> 5 - £4.50</option>
+            <option value="10"> 10 - £7.50</option>
+            <option value="20"> 20 - £13.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Chicken Strips</h4>
+          <select id="size">
+            <option value="2"> 3 - £3.00</option>
+            <option value="5"> 5 - £4.50</option>
+            <option value="10"> 10 - £8.00</option>
+            <option value="20"> 20 - £15.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Spicy Dipped Strips</h4>
+          <select id="size">
+            <option value="3"> 3 - £3.50</option>
+            <option value="5"> 5 - £5.00</option>
+            <option value="10"> 10 - £9.00</option>
+            <option value="20"> 20 - £16.50</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>BBQ Chicken Strips</h4>
+          <select id="size">
+            <option value="3"> 3 - £3.90</option>
+            <option value="5"> 5 - £5.50</option>
+            <option value="10"> 10 - £9.50</option>
+            <option value="20"> 20 - £17.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Peri Chicken Strips</h4>
+          <select id="size">
+            <option value="3"> 3 - £3.90</option>
+            <option value="5"> 5 - £5.50</option>
+            <option value="10"> 10 - £9.50</option>
+            <option value="20"> 20 - £17.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        <div class="food-item">
+          <img src="Images/pepsi.jpeg" alt="">
+          <h4>Lemon Pepper Strips</h4>
+          <select id="size">
+            <option value="3"> 3 - £4.00</option>
+            <option value="5"> 5 - £5.80</option>
+            <option value="10"> 10 - £9.99</option>
+            <option value="20"> 20 - £18.00</option>
+        </select>
+        <button>Add to cart</button>
+
+        </div>
+        </div>
+    </section>
+
+<!--Sides-->
+<section id="sides" class="menu-container" style="display: none;">
+  <div class="food-items">
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Corn of the Cob</h4>
+      <p>£1.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Onion Rings(10)</h4>
+      <p>3.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Hash Browns(3)</h4>
+      <p>2.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Potatoe Wedges</h4>
+      <p>3.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Fries</h4>
+      <select id="size">
+        <option value="Regular"> Regular - £2.00</option>
+        <option value="Large"> Large - £3.50</option>
+    </select>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Spiral Fries</h4>
+      <p>3.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Chicken Nuggets</h4>
+      <select id="size">
+        <option value="6"> 6 - £3.00</option>
+        <option value="9"> 9 - £4.50</option>
+    </select>
+          <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Popcorn Chicken</h4>
+      <p>4.00</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Coleslaw</h4>
+      <p>1.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Chicken Sauce</h4>
+      <p>1.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Spicy Gravy</h4>
+      <p>1.75</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Beans</h4>
+      <p>1.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>BBQ Beans</h4>
+      <p>1.75</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Rice</h4>
+      <p>2.99</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Side Salad</h4>
+<select id="size">
+  <option value="Small">£2.50</option>
+  <option value="Large">£4.50</option>
+</select>
+  <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Nacho Cheese Sauce</h4>
+      <p>2.00</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Spicy Susce Dip</h4>
+<select id="size">
+  <option value="Small">£1.00</option>
+  <option value="Large">£2.00</option>
+</select>
+  <button>Add to cart</button>
+    </div>
+
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Dips - Tub of Sauce</h4>
+<select id="size">
+  <option value="Small">£0.30</option>
+  <option value="Large">£0.60</option>
+</select>
+  <button>Add to cart</button>
+  </div>
+  </section>
+
+  <!--Nachos-->
+<section id="nachos" class="menu-container" style="display: none;">
+  <div class="food-items">
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Cheesy Nachos</h4>
+      <p>£2.99</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Loaded Nachos</h4>
+      <p>£4.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Fully Loaded Nachos</h4>
+      <p>£6.99</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Loaded Fries</h4>
+      <p>£6.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Cheesy Fries</h4>
+      <p>£3.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Loaded Fries</h4>
+      <p>£4.50</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Fully Loaded Fries</h4>
+      <p>£6.99</p>
+          <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Loaded Dynamite Popcorn</h4>
+      <p>£6.99</p>
+      <button>Add to cart</button>
+    </div>
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Extra Nacho Cheese Sauce</h4>
+      <p>£2.00</p>
+      <button>Add to cart</button>
+    </div>
+    
+    <div class="food-item">
+      <img src="Images/pepsi.jpeg" alt="">
+      <h4>Extra Spicy Dip Sauce</h4>
+<select id="size">
+  <option value="Small">£1.00</option>
+  <option value="Large">£2.00</option>
+</select>
+  <button>Add to cart</button>
+    </div>
+  </div>
+  </section>
+
+<!--Peri Platter-->
+  <section id="periplatter" class="menu-container" style="display: none;" >
+    <div class="food-items">
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Quarter Peri Chicken Platter</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £4.00</option>
+          <option value="Rice&chips"> Rice & Chips - £5.00</option>
+          <option value="Rice"> Rice - £6.00</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Half Peri Platter</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £7.50</option>
+          <option value="Rice&chips"> Rice & Chips - £7.99</option>
+          <option value="Rice"> Rice - £8.99</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Full Peri Chicken Platter</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £11.50</option>
+          <option value="Rice&chips"> Rice & Chips - £11.99</option>
+          <option value="Rice"> Rice - £12.99</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Half BBQ Chicken Platter</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £7.99</option>
+          <option value="Rice&chips"> Rice & Chips - £8.50</option>
+          <option value="Rice"> Rice - £9.50</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+
+
+ <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Peri Wing Platter(5pc)</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £7.00</option>
+          <option value="Rice&chips"> Rice & Chips - £7.50</option>
+          <option value="Rice"> Rice - £8.50</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Peri Wing Platter(10pc)</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £10.00</option>
+          <option value="Rice&chips"> Rice & Chips - £10.50</option>
+          <option value="Rice"> Rice - £11.50</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Peri Chicken Strip Platter(5pc)</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £8.00</option>
+          <option value="Rice&chips"> Rice & Chips - £8.50</option>
+          <option value="Rice"> Rice - £9.50</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Peri Chicken Strip Platter(10pc)</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £11.49</option>
+          <option value="Rice&chips"> Rice & Chips - £11.99</option>
+          <option value="Rice"> Rice - £12.99</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Dice Box</h4>
+        <select id="size">
+          <option value="Chips"> Chips - £6.50</option>
+      </select>
+      <button>Add to cart</button>
+
+      </div>
+      <div class="food-item">
+        <img src="Images/pepsi.jpeg" alt="">
+        <h4>Rice Box</h4>
+        <select id="size">
+          <option value="Rice"> Rice - £6.99</option>
+      </select>
+            <button>Add to cart</button>
+
+      </div>
+    </div>
+</section>
+
+</section>
+
+<div class="about-us" id="about-us">
+      <img src="Images/krispy2.jpg" alt="">
+            <div class="about-us-info" >
+              <h1>About Us</h1>
+              <p>Welcome to Krispy Chicken, your go-to destination for delicious takeaway in Levenshulme, Manchester! Located at 906 Stockport Rd, we pride ourselves on serving a diverse menu that caters to all taste buds. From our mouthwatering chicken wings to our flavorful burgers and hearty platters, each dish is crafted with care and attention to detail, ensuring a scrumptious experience with every bite.</p>
+
+                <p>At Krispy Chicken, we believe that great food brings people together. Our wide variety of offerings, including crispy nachos and a selection of signature platters, is perfect for sharing with family and friends or indulging on your own. We’re committed to using high-quality ingredients and delivering a memorable dining experience for our customers.</p>
+                <p>Explore our menu and order directly from our website to enjoy a taste of Manchester’s finest takeaway. Join the Krispy Chicken family and savor the flavors that have made us a local favorite!</p>
+    </div>
+  </div>
+
+<footer>
+  <div class="footer-container">
+<div class="footer-section">
+    <div class="map"><h4>Our Location | Find us on the map:</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.308099067022!2d-2.1917420999999813!3d53.44507850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb3c4c167ed29%3A0xf52dd9e0ff6651e3!2s906%20Stockport%20Rd%2C%20Levenshulme%2C%20Manchester%20M19%203AD!5e0!3m2!1sen!2suk!4v1728954187377!5m2!1sen!2suk" 
+    width="350" 
+    height="350" 
+    style="border:0;"
+     allowfullscreen="" 
+     loading="lazy" 
+     referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+<div class="secure-payments">
+<h4>Secure Payments with</h4>
+<div class="payment-icons">
+    <i class="fab fa-cc-visa"></i>
+    <i class="fab fa-cc-mastercard"></i>
+    <i class="fab fa-cc-mastercard"></i>
+</div>
+
+</div>
+<div class="quick-links">
+  <h4>Quick Links</h4>
+  <ul>
+      <li><a href="About Us">About Us</a></li>
+      <li><a href="Home">FAQ</a></li>
+      <li><a href="Home">Privacy Policy</a></li>
+      <li><a href="Home">Cookies Policy</a></li>
+      <li><a href="Home">Refund & Cancellation</a></li>
+      <li><a href="Home">Terms and Conditions</a></li>
+
+  </ul>
+  </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
